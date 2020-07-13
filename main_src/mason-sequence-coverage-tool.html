@@ -1,0 +1,79 @@
+<html>
+<head>
+
+</head>
+<body>
+
+
+    <div >
+        <h1>Sequence Coverage Tool</h1>
+    </div>
+    <div>
+        Protein Sequence
+        <input
+            id="sequence_coverage_protein_sequence"
+            type="text" style="width: 400px"
+            placeholder="Protein Sequence"
+        >
+    </div>
+    <div style="margin-top: 10px;">
+        <div>
+            Peptide sequences (1 per line)
+        </div>
+        <div>
+            <textarea
+                id="sequence_coverage_peptide_sequences"
+                style="width: 500px; height: 100px;"
+                placeholder="Peptide Sequences"
+            ></textarea>
+        </div>
+    </div>
+    <div style="margin-top: 10px;">
+        <input type="button" value="generate image" id="sequence_coverage_generate_image_button">
+    </div>
+
+    <div style="margin-top: 10px;">
+        <!-- Mason Instance is rendered here.  Rendered as the width of this <div> -->
+        <div  id="sequence_coverage_mason_instance"
+        ><!-- Limit Mason render to a max width:   style="max-width: 600px" -->
+        </div>
+
+        <!--  Error messages -->
+        <div id="mason-viewer-svg-not-supported" style="display: none">
+            SVG is not supported so unable to display result
+        </div>
+        <div id="mason-viewer-generic-json-failed-to-create" style="display: none">
+            Unable to display result
+        </div>
+    </div>
+
+
+    <!-- import required libraries -->
+
+    <script type="text/javascript" src="javascript/libraries/jquery-1.8.0.min.js" ></script>
+
+    <script type="text/javascript"  src="javascript/libraries/modernizr.v2.7.1__custom.39924_min.js"></script>
+
+    <script type="text/javascript"  src="javascript/libraries/svg.min.js"></script>
+    <script type="text/javascript"  src="javascript/libraries/wz_tooltip-min.js"></script>
+
+
+    <!-- import mason viewer js file. -->
+
+    <!--  import minified file for production. -->
+    <!--
+    -->
+    <script type="text/javascript" src="javascript/mason_viewer/mason_viewer-min.js"></script>
+
+
+    <!-- Import the main JS files for page  -->
+
+
+    <script type="text/javascript" src="javascript/main_project/generic_json_callbacks.js"></script>
+
+    <script type="text/javascript" src="javascript/main_project/generic_json_creator.js"></script>
+
+    <script type="text/javascript" src="javascript/main_project/mason-sequence-coverage-tool.js"></script>
+
+</body>
+</html>
